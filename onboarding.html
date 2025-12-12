@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding | The Bond</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+</head>
+<body class="bg-blue-50">
+<header class="fixed top-0 left-0 right-0 z-50 bg-primary bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-serif font-bold text-white">The <span class="text-secondary">Bond</span></a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="/" class="text-white hover:text-secondary transition duration-300">Home</a>
+                <a href="/about.html" class="text-white hover:text-secondary transition duration-300">About</a>
+                <a href="/discipleship.html" class="text-white hover:text-secondary transition duration-300">Discipleship</a>
+                <a href="/contact.html" class="text-white hover:text-secondary transition duration-300">Contact</a>
+            </div>
+
+            <button class="md:hidden text-white focus:outline-none" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-primary bg-opacity-95" id="mobile-menu">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="/" class="text-white hover:text-secondary transition duration-300">Home</a>
+                <a href="/about.html" class="text-white hover:text-secondary transition duration-300">About</a>
+                <a href="/discipleship.html" class="text-white hover:text-secondary transition duration-300">Discipleship</a>
+                <a href="/contact.html" class="text-white hover:text-secondary transition duration-300">Contact</a>
+            </div>
+        </div>
+    </header>    
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+            <div class="bg-blue-900 text-white p-6">
+                <h1 class="text-3xl font-bold">Welcome to The Bond</h1>
+                <p class="mt-2">Let's get you started on your discipleship journey</p>
+            </div>
+            
+            <div class="p-6">
+                <!-- Progress Steps -->
+                <div class="flex justify-between mb-8 relative">
+                    <div class="step flex flex-col items-center relative z-10">
+                        <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">1</div>
+                        <span class="mt-2 text-sm font-medium text-blue-900">Welcome</span>
+                    </div>
+                    <div class="step flex flex-col items-center relative z-10">
+                        <div class="w-10 h-10 rounded-full bg-blue-200 text-blue-900 flex items-center justify-center font-bold">2</div>
+                        <span class="mt-2 text-sm font-medium text-blue-700">Statement of Faith</span>
+                    </div>
+                    <div class="step flex flex-col items-center relative z-10">
+                        <div class="w-10 h-10 rounded-full bg-blue-200 text-blue-900 flex items-center justify-center font-bold">3</div>
+                        <span class="mt-2 text-sm font-medium text-blue-700">About The Bond</span>
+                    </div>
+                    <div class="step flex flex-col items-center relative z-10">
+                        <div class="w-10 h-10 rounded-full bg-blue-200 text-blue-900 flex items-center justify-center font-bold">4</div>
+                        <span class="mt-2 text-sm font-medium text-blue-700">Registration</span>
+                    </div>
+                    <div class="absolute top-5 left-0 right-0 h-1 bg-blue-200 mx-10"></div>
+                    <div class="absolute top-5 left-0 h-1 bg-blue-600 mx-10" style="width: 25%;"></div>
+                </div>
+                
+                <!-- Welcome Content -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold text-blue-900 mb-4">Welcome, New Believer!</h2>
+                    <p class="text-blue-800 mb-4">We're thrilled you've decided to join The Bond community. This is the beginning of an exciting journey of spiritual growth and fellowship.</p>
+                    <p class="text-blue-800 mb-4">Our mission is to help you build a strong foundation in Christ through biblical teaching, practical discipleship, and supportive community.</p>
+                    <p class="text-blue-800">This onboarding process will introduce you to our core beliefs, what we stand for, and get you registered in our system.</p>
+                </div>
+                
+                <div class="flex justify-end">
+                    <a href="statement-of-faith.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-md transition duration-300 inline-block">Next</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+ <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-serif font-bold mb-4">The <span class="text-secondary">Bond</span></h3>
+                    <p class="mb-4 text-lg">A Christ-centered community dedicated to discipleship, fellowship, and spiritual growth.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-secondary transition duration-300 text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-secondary transition duration-300 text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-secondary transition duration-300 text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-secondary transition duration-300 text-xl"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="hover:text-secondary transition duration-300">Home</a></li>
+                        <li><a href="/about.html" class="hover:text-secondary transition duration-300">About</a></li>
+                        <li><a href="/discipleship.html" class="hover:text-secondary transition duration-300">Discipleship</a></li>
+                        <li><a href="/contact.html" class="hover:text-secondary transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Contact</h3>
+                    <p class="mb-3 flex items-center">
+                        <i class="fas fa-map-marker-alt mr-3 text-secondary"></i> 
+                        <span>123 Faith Avenue, Spiritual City</span>
+                    </p>
+                    <p class="mb-3 flex items-center">
+                        <i class="fas fa-envelope mr-3 text-secondary"></i> 
+                        <span>info@thebond.org</span>
+                    </p>
+                    <p class="mb-3 flex items-center">
+                        <i class="fas fa-phone mr-3 text-secondary"></i> 
+                        <span>(123) 456-7890</span>
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-clock mr-3 text-secondary"></i> 
+                        <span>Sundays: 9am - 12pm</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-lg">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> The Bond. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>    <script>feather.replace();</script>
+</body>
+</html>

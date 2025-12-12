@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bond - Christian Discipleship Community</title>
+    <meta name="description" content="Join The Bond - a Christ-centered community for spiritual growth through fellowship, teaching, and discipleship.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0A2A6B',
+                        secondary: '#F5B400',
+                        light: '#F9FAFB',
+                        gray: '#DADADA'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-light text-primary">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-primary bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-serif font-bold text-white">The <span class="text-secondary">Bond</span></a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="/" class="text-white hover:text-secondary transition duration-300">Home</a>
+                <a href="/about.html" class="text-white hover:text-secondary transition duration-300">About</a>
+                <a href="/discipleship.html" class="text-white hover:text-secondary transition duration-300">Discipleship</a>
+                <a href="/contact.html" class="text-white hover:text-secondary transition duration-300">Contact</a>
+            </div>
+
+            <button class="md:hidden text-white focus:outline-none" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-primary bg-opacity-95" id="mobile-menu">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="/" class="text-white hover:text-secondary transition duration-300">Home</a>
+                <a href="/about.html" class="text-white hover:text-secondary transition duration-300">About</a>
+                <a href="/discipleship.html" class="text-white hover:text-secondary transition duration-300">Discipleship</a>
+                <a href="/contact.html" class="text-white hover:text-secondary transition duration-300">Contact</a>
+            </div>
+        </div>
+    </header>
+<!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center bg-primary overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <img src="priscilla-du-preez-4E4AccyhWZo-unsplash.jpg" alt="Christian fellowship" class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-serif font-bold text-light mb-6">Welcome to The Bond</h1>
+<p class="text-xl md:text-2xl text-white mb-8">A Community Rooted in Christ, Growing in Fellowship, Teaching, and Discipleship.</p>
+            <p class="text-secondary italic mb-10">"Acts 2:42 – They devoted themselves to the apostles' teaching and to fellowship."</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="contact.html" class="bg-secondary hover:bg-yellow-600 text-primary font-bold py-3 px-6 rounded-md transition duration-300">Join The Bond</a>
+                <a href="discipleship.html" class="bg-transparent hover:bg-white/10 border-2 border-light text-light font-bold py-3 px-6 rounded-md transition duration-300">Start Discipleship</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 px-4 max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <img src="alex-shute-hrIBApaYgxM-unsplash.jpg" alt="Bible study group" class="rounded-lg shadow-lg w-full">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-serif font-bold mb-6">About The Bond</h2>
+                <p class="text-lg mb-6">The Bond is a Christ-centered discipleship community dedicated to helping believers grow in faith through structured teaching, meaningful fellowship, and practical application of God's Word.</p>
+                <div class="flex gap-4 mb-8">
+                    <div class="p-4 bg-primary/5 rounded-lg">
+                        <i data-feather="book" class="text-secondary w-8 h-8 mb-2"></i>
+                        <p class="font-bold">Bible-Based</p>
+                    </div>
+                    <div class="p-4 bg-primary/5 rounded-lg">
+                        <i data-feather="users" class="text-secondary w-8 h-8 mb-2"></i>
+                        <p class="font-bold">Community</p>
+                    </div>
+                    <div class="p-4 bg-primary/5 rounded-lg">
+                        <i data-feather="heart" class="text-secondary w-8 h-8 mb-2"></i>
+                        <p class="font-bold">Love</p>
+                    </div>
+                </div>
+                <a href="/about" class="inline-flex items-center text-secondary font-bold hover:text-yellow-600 transition duration-300">
+                    Learn more <i data-feather="arrow-right" class="ml-2 w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="py-20 bg-primary/5 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiPjxnIGZpbGw9IiMwQTJBNkIiIG9wYWNpdHk9IjAuMSI+PHBhdGggZD0iTTAgMEg0MFY0MEgweiIvPjwvZz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')]"></div>
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold text-center mb-16">Our Purpose</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="bg-white p-8 rounded-lg shadow-md relative z-10">
+                    <i data-feather="target" class="w-10 h-10 text-secondary mb-4"></i>
+                    <h3 class="text-2xl font-serif font-bold mb-4">Mission</h3>
+                    <p class="text-lg">To build a Christ-centered community where believers grow in faith, character, and purpose through structured discipleship.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md relative z-10">
+                    <i data-feather="eye" class="w-10 h-10 text-secondary mb-4"></i>
+                    <h3 class="text-2xl font-serif font-bold mb-4">Vision</h3>
+                    <p class="text-lg">To raise spiritually mature believers committed to fellowship, ministry, and impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="py-20 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-serif font-bold text-center mb-16">Our Core Values</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Value 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                <i data-feather="shield" class="w-8 h-8 text-secondary mb-4"></i>
+                <h3 class="text-xl font-serif font-bold mb-2">Faithfulness</h3>
+                <p>Standing firm in the truth of God's Word</p>
+            </div>
+            
+            <!-- Value 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                <i data-feather="heart" class="w-8 h-8 text-secondary mb-4"></i>
+                <h3 class="text-xl font-serif font-bold mb-2">Love</h3>
+                <p>Showing the love of Christ in all interactions</p>
+            </div>
+            
+            <!-- Value 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                <i data-feather="check-circle" class="w-8 h-8 text-secondary mb-4"></i>
+                <h3 class="text-xl font-serif font-bold mb-2">Integrity</h3>
+                <p>Living a life of honesty and purity</p>
+            </div>
+            
+            <!-- Value 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                <i data-feather="help-circle" class="w-8 h-8 text-secondary mb-4"></i>
+                <h3 class="text-xl font-serif font-bold mb-2">Service</h3>
+                <p>Serving God and one another</p>
+            </div>
+            
+            <!-- Value 5 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                <i data-feather="users" class="w-8 h-8 text-secondary mb-4"></i>
+                <h3 class="text-xl font-serif font-bold mb-2">Community</h3>
+                <p>Supporting spiritual growth through fellowship</p>
+            </div>
+            
+            <!-- Value 6 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                <i data-feather="book-open" class="w-8 h-8 text-secondary mb-4"></i>
+                <h3 class="text-xl font-serif font-bold mb-2">Discipleship</h3>
+                <p>Equipping believers to grow and multiply spiritually</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-primary text-light px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-serif font-bold text-center mb-16">Meet Our Leadership</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Member 1 -->
+                <div class="bg-primary/50 backdrop-blur-sm p-6 rounded-lg">
+                    <img src="DSC_8398.JPG" alt="Pastor John" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-secondary">
+                    <h3 class="text-xl font-serif font-bold text-center mb-1">Dickson Nyagaka</h3>
+                    <p class="text-secondary text-center mb-4">Founder & Spiritual Director</p>
+                    <p class="text-center">Leads our spiritual vision and teaching ministry.</p>
+                </div>
+                
+                <!-- Member 2 -->
+                <div class="bg-primary/50 backdrop-blur-sm p-6 rounded-lg">
+                    <img src="DSC_8398.JPG" alt="Sarah Johnson" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-secondary">
+                    <h3 class="text-xl font-serif font-bold text-center mb-1">Purity Oreng'</h3>
+                    <p class="text-secondary text-center mb-4">Discipleship Coordinator</p>
+                    <p class="text-center">Oversees our discipleship programs and curriculum.</p>
+                </div>
+                
+                <!-- Member 3 -->
+                <div class="bg-primary/50 backdrop-blur-sm p-6 rounded-lg">
+                    <img src="DSC_8398.JPG" alt="Michael Brown" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-secondary">
+                    <h3 class="text-xl font-serif font-bold text-center mb-1">Enock Muthoka</h3>
+                    <p class="text-secondary text-center mb-4">Fellowship Director</p>
+                    <p class="text-center">Coordinates our community events and small groups.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discipleship Teaser -->
+    <section class="py-20 px-4 max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-serif font-bold mb-6">Begin Your Discipleship Journey</h2>
+                <p class="text-lg mb-6">Our structured Christian discipleship lessons are designed to strengthen your faith and deepen your understanding of God's Word.</p>
+                
+                <div class="mb-8">
+                    <div class="flex items-center mb-3">
+                        <i data-feather="check-circle" class="text-secondary mr-3"></i>
+                        <span>Salvation & New Life in Christ</span>
+                    </div>
+                    <div class="flex items-center mb-3">
+                        <i data-feather="check-circle" class="text-secondary mr-3"></i>
+                        <span>Prayer & Spiritual Growth</span>
+                    </div>
+                    <div class="flex items-center mb-3">
+                        <i data-feather="check-circle" class="text-secondary mr-3"></i>
+                        <span>Bible Study Methods</span>
+                    </div>
+                    <div class="flex items-center mb-3">
+                        <i data-feather="check-circle" class="text-secondary mr-3"></i>
+                        <span>The Holy Spirit</span>
+                    </div>
+                    <div class="flex items-center mb-3">
+                        <i data-feather="check-circle" class="text-secondary mr-3"></i>
+                        <span>Christian Character</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i data-feather="check-circle" class="text-secondary mr-3"></i>
+                        <span>Community & Ministry</span>
+                    </div>
+                </div>
+                
+                <a href="/discipleship" class="inline-block bg-secondary hover:bg-yellow-600 text-primary font-bold py-3 px-6 rounded-md transition duration-300">
+                    Start Discipleship
+                </a>
+            </div>
+            <div class="md:w-1/2">
+                <img src="aaron-burden-vKBdY7e7KFk-unsplash.jpg" alt="Discipleship group" class="rounded-lg shadow-lg w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="relative py-20 bg-primary text-center text-light">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <img src="mikolaj-Yy9ghY8k348-unsplash.jpg" alt="Prayer group" class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative z-10 max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">Ready to grow in faith?</h2>
+            <p class="text-xl mb-8">Join a community built on Christ and experience transformative discipleship.</p>
+            <p class="text-secondary italic mb-10">"Matthew 28:19 – Go and make disciples of all nations."</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="/contact" class="bg-secondary hover:bg-yellow-600 text-primary font-bold py-3 px-6 rounded-md transition duration-300">Join The Bond</a>
+                <a href="/discipleship" class="bg-transparent hover:bg-white/10 border-2 border-light text-light font-bold py-3 px-6 rounded-md transition duration-300">Talk to a Mentor</a>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-serif font-bold mb-4">The <span class="text-secondary">Bond</span></h3>
+                    <p class="mb-4 text-lg">A Christ-centered community dedicated to discipleship, fellowship, and spiritual growth.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-secondary transition duration-300 text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-secondary transition duration-300 text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-secondary transition duration-300 text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-secondary transition duration-300 text-xl"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="hover:text-secondary transition duration-300">Home</a></li>
+                        <li><a href="/about.html" class="hover:text-secondary transition duration-300">About</a></li>
+                        <li><a href="/discipleship.html" class="hover:text-secondary transition duration-300">Discipleship</a></li>
+                        <li><a href="/contact.html" class="hover:text-secondary transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Contact</h3>
+                    <p class="mb-3 flex items-center">
+                        <i class="fas fa-map-marker-alt mr-3 text-secondary"></i> 
+                        <span>123 Faith Avenue, Spiritual City</span>
+                    </p>
+                    <p class="mb-3 flex items-center">
+                        <i class="fas fa-envelope mr-3 text-secondary"></i> 
+                        <span>info@thebond.org</span>
+                    </p>
+                    <p class="mb-3 flex items-center">
+                        <i class="fas fa-phone mr-3 text-secondary"></i> 
+                        <span>(123) 456-7890</span>
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-clock mr-3 text-secondary"></i> 
+                        <span>Sundays: 9am - 12pm</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-lg">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> The Bond. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Feather icons
+        feather.replace();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
