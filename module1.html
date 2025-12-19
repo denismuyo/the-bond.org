@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Bond | Discipleship Portal – Module 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --primary-blue: #0a3d62;
+      --secondary-blue: #1e90ff;
+      --light-blue: #f2f7fb;
+      --accent-gold: #f2c94c;
+      --text-dark: #1a1a1a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--light-blue);
+      color: var(--text-dark);
+    }
+
+    /* ===== TOP NAV ===== */
+    .top-nav {
+      background: var(--primary-blue);
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-nav h1 {
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+
+    .progress {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      display: flex;
+      min-height: calc(100vh - 60px);
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      width: 260px;
+      background: #ffffff;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+    }
+
+    .sidebar h3 {
+      margin-bottom: 15px;
+      color: var(--primary-blue);
+    }
+
+    .module-list {
+      list-style: none;
+    }
+
+    .module-list li {
+      padding: 12px;
+      margin-bottom: 8px;
+      border-radius: 6px;
+      background: #f5f8fc;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .module-list li.active {
+      background: var(--secondary-blue);
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .module-list li.locked {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* ===== CONTENT ===== */
+    .content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .module-banner {
+      background: linear-gradient(
+        rgba(10, 61, 98, 0.7),
+        rgba(10, 61, 98, 0.7)
+      ),
+      url("https://images.unsplash.com/photo-1504052434569-70ad5836ab65");
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 50px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    .module-banner h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .module-banner p {
+      max-width: 700px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ===== SLIDES ===== */
+    .slide-box {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .slide-box h3 {
+      color: var(--primary-blue);
+      margin-bottom: 15px;
+    }
+
+    .scripture {
+      background: #f2f7fb;
+      border-left: 5px solid var(--secondary-blue);
+      padding: 15px;
+      margin: 20px 0;
+      font-style: italic;
+    }
+
+    .side-note {
+      background: #fff8e1;
+      border-left: 5px solid var(--accent-gold);
+      padding: 15px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    /* ===== NAV BUTTONS ===== */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    button {
+      background: var(--secondary-blue);
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* ===== ASSIGNMENT ===== */
+    .assignment {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      margin-top: 30px;
+    }
+
+    .assignment h3 {
+      margin-bottom: 15px;
+      color: var(--primary-blue);
+    }
+
+    .assignment textarea,
+    .assignment input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 40px;
+      color: #555;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP NAV -->
+  <div class="top-nav">
+    <h1>The Bond | Discipleship Portal</h1>
+    <div class="progress">Module 1 of 5</div>
+  </div>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h3>Modules</h3>
+      <ul class="module-list">
+        <li class="active">Module 1: Foundations</li>
+        <li class="locked">Module 2: Salvation</li>
+        <li class="locked">Module 3: Prayer</li>
+        <li class="locked">Module 4: The Word</li>
+        <li class="locked">Module 5: Holy Spirit</li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+      <div class="module-banner">
+        <h2>Module 1: Foundations of Discipleship</h2>
+        <p>
+          Welcome to your discipleship journey. This module introduces the
+          biblical meaning of discipleship and the call to follow Jesus Christ
+          wholeheartedly.
+        </p>
+      </div>
+
+      <div class="slide-box" id="slideContent"></div>
+
+      <div class="nav-buttons">
+        <button id="prevBtn" disabled>Previous</button>
+        <button id="nextBtn">Next</button>
+      </div>
+
+      <!-- ASSIGNMENT -->
+      <div class="assignment" id="assignment" style="display:none;">
+        <h3>Module 1 Reflection Assignment</h3>
+        <p>
+          Reflect on what discipleship means to you and how following Christ
+          will shape your daily life.
+        </p>
+
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Your Email" />
+        <textarea rows="6" placeholder="Your reflection (300–500 words)"></textarea>
+
+        <button onclick="completeModule()">Submit Assignment</button>
+      </div>
+
+      <footer>
+        Scripture quotations taken from the Holy Bible, New International Version
+        (NIV®). Copyright © Biblica, Inc.
+      </footer>
+
+    </main>
+  </div>
+
+<script>
+const slides = [
+  {
+    title: "Introduction to Discipleship",
+    content: `
+      <p>
+        Discipleship is not a church program or a class. It is a lifelong
+        commitment to follow Jesus Christ in faith, obedience, and transformation.
+      </p>
+      <div class="scripture">
+        <strong>Matthew 28:18–19 (NIV)</strong><br/>
+        “All authority in heaven and on earth has been given to me.
+        Therefore go and make disciples of all nations…”
+      </div>
+      <div class="side-note">
+        Discipleship is the heartbeat of Christianity — not attendance, but transformation.
+      </div>
+    `
+  },
+
+  {
+    title: "What Is Discipleship?",
+    content: `
+      <p>
+        Discipleship is the process of following Jesus Christ, learning from His
+        teachings, and becoming more like Him in character, mindset, and purpose.
+      </p>
+      <div class="scripture">
+        <strong>Matthew 4:19 (NIV)</strong><br/>
+        “Come, follow me,” Jesus said, “and I will send you out to fish for people.”
+      </div>
+      <ul>
+        <li><strong>Relationship:</strong> A personal walk with Jesus as Lord</li>
+        <li><strong>Transformation:</strong> Growth into Christlikeness</li>
+        <li><strong>Mission:</strong> Making other disciples</li>
+      </ul>
+    `
+  },
+
+  {
+    title: "Who Is a Disciple?",
+    content: `
+      <p>
+        A disciple is a committed learner, imitator, and ambassador of Jesus Christ.
+        The Greek word <em>mathētēs</em> means learner or pupil.
+      </p>
+      <div class="scripture">
+        <strong>Luke 14:27 (NIV)</strong><br/>
+        “And whoever does not carry their cross and follow me cannot be my disciple.”
+      </div>
+      <div class="side-note">
+        Discipleship is not casual belief — it is surrendered ownership to Christ.
+      </div>
+    `
+  },
+
+  {
+    title: "Characteristics of a True Disciple",
+    content: `
+      <ul>
+        <li><strong>Follows Christ:</strong> Daily surrender and obedience</li>
+        <li><strong>Learns God’s Word:</strong> Abides in Scripture</li>
+        <li><strong>Bears Fruit:</strong> Evidence of transformed character</li>
+        <li><strong>Makes Disciples:</strong> Multiplication, not isolation</li>
+        <li><strong>Loves Others:</strong> Selfless Christ-like love</li>
+        <li><strong>Led by the Spirit:</strong> Dependence on the Holy Spirit</li>
+      </ul>
+
+      <div class="scripture">
+        <strong>John 15:8 (NIV)</strong><br/>
+        “This is to my Father’s glory, that you bear much fruit,
+        showing yourselves to be my disciples.”
+      </div>
+    `
+  },
+
+  {
+    title: "Why Discipleship Matters",
+    content: `
+      <p>
+        Discipleship aligns believers with God’s eternal purpose and matures them
+        into effective representatives of Christ.
+      </p>
+      <div class="scripture">
+        <strong>Ephesians 4:15 (NIV)</strong><br/>
+        “Instead, speaking the truth in love, we will grow to become
+        in every respect the mature body of him who is the head, that is, Christ.”
+      </div>
+      <ul>
+        <li>Obedience to Christ</li>
+        <li>Spiritual maturity</li>
+        <li>Community and accountability</li>
+        <li>Eternal impact</li>
+      </ul>
+    `
+  },
+
+  {
+    title: "When to Disciple",
+    content: `
+      <p>
+        Discipleship begins at salvation and continues throughout life.
+      </p>
+      <div class="scripture">
+        <strong>Luke 9:23 (NIV)</strong><br/>
+        “Whoever wants to be my disciple must deny themselves
+        and take up their cross daily and follow me.”
+      </div>
+      <div class="side-note">
+        There is no graduation from discipleship — growth continues in every season.
+      </div>
+    `
+  },
+
+  {
+    title: "Where Discipleship Happens",
+    content: `
+      <p>
+        Discipleship is not confined to church buildings. It happens wherever life happens.
+      </p>
+      <ul>
+        <li>The Church – teaching, fellowship, mentorship</li>
+        <li>The Home – family devotions and modeling Christ</li>
+        <li>Workplaces and Schools – integrity and witness</li>
+        <li>Community and Mission Fields</li>
+        <li>Digital and Online Platforms</li>
+      </ul>
+      <div class="scripture">
+        <strong>Acts 1:8 (NIV)</strong><br/>
+        “You will be my witnesses… to the ends of the earth.”
+      </div>
+    `
+  },
+
+  {
+    title: "How to Disciple Effectively",
+    content: `
+      <ul>
+        <li>Studying and applying God’s Word</li>
+        <li>Prayer and worship</li>
+        <li>Fellowship and mentorship</li>
+        <li>Obedience and service</li>
+        <li>Evangelism and multiplication</li>
+        <li>Dependence on the Holy Spirit</li>
+      </ul>
+      <div class="scripture">
+        <strong>2 Timothy 2:2 (NIV)</strong><br/>
+        “Entrust to reliable people who will also be qualified to teach others.”
+      </div>
+    `
+  },
+
+  {
+    title: "Module 1 Summary",
+    content: `
+      <p>
+        Discipleship is a lifelong journey of following Jesus, becoming like Him,
+        and helping others do the same.
+      </p>
+      <div class="side-note">
+        The Bond exists to nurture disciples who live out their faith boldly and faithfully.
+      </div>
+    `
+  }
+];
+
+
+
+
+    let currentSlide = 0;
+
+    const slideBox = document.getElementById("slideContent");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const assignment = document.getElementById("assignment");
+
+    function renderSlide() {
+      slideBox.innerHTML = `
+        <h3>${slides[currentSlide].title}</h3>
+        ${slides[currentSlide].content}
+        <p><em>Slide ${currentSlide + 1} of ${slides.length}</em></p>
+      `;
+
+      prevBtn.disabled = currentSlide === 0;
+
+      if (currentSlide === slides.length - 1) {
+        nextBtn.textContent = "Go to Assignment";
+      } else {
+        nextBtn.textContent = "Next";
+      }
+    }
+
+    nextBtn.addEventListener("click", () => {
+      if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        renderSlide();
+      } else {
+        assignment.style.display = "block";
+        nextBtn.disabled = true;
+      }
+    });
+
+    prevBtn.addEventListener("click", () => {
+      currentSlide--;
+      renderSlide();
+    });
+
+    function completeModule() {
+      alert("Assignment submitted. Module completed. Next module unlocked.");
+    }
+
+    renderSlide();
+  </script>
+
+</body>
+</html>
