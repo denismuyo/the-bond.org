@@ -15,13 +15,13 @@
 <body class="font-body bg-accent">
 <header class="fixed top-0 left-0 right-0 z-50 bg-primary bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-md">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-serif font-bold text-white">The <span class="text-secondary">Bond</span></a>
+            <a href="/" class="text-2xl font-serif font-bold text-white">The <span class="text-secondary">Bond</span></a>
             
             <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-white hover:text-secondary transition duration-300">Home</a>
-                <a href="about.html" class="text-white hover:text-secondary transition duration-300">About</a>
-                <a href="discipleship.html" class="text-white hover:text-secondary transition duration-300">Discipleship</a>
-                <a href="contact.html" class="text-white hover:text-secondary transition duration-300">Contact</a>
+                <a href="/" class="text-white hover:text-secondary transition duration-300">Home</a>
+                <a href="/about.html" class="text-white hover:text-secondary transition duration-300">About</a>
+                <a href="/discipleship.html" class="text-white hover:text-secondary transition duration-300">Discipleship</a>
+                <a href="/contact.html" class="text-white hover:text-secondary transition duration-300">Contact</a>
             </div>
 
             <button class="md:hidden text-white focus:outline-none" id="mobile-menu-button">
@@ -32,10 +32,10 @@
         <!-- Mobile menu -->
         <div class="md:hidden hidden bg-primary bg-opacity-95" id="mobile-menu">
             <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
-                <a href="index.html" class="text-white hover:text-secondary transition duration-300">Home</a>
-                <a href="about.html" class="text-white hover:text-secondary transition duration-300">About</a>
-                <a href="discipleship.html" class="text-white hover:text-secondary transition duration-300">Discipleship</a>
-                <a href="contact.html" class="text-white hover:text-secondary transition duration-300">Contact</a>
+                <a href="/" class="text-white hover:text-secondary transition duration-300">Home</a>
+                <a href="/about.html" class="text-white hover:text-secondary transition duration-300">About</a>
+                <a href="/discipleship.html" class="text-white hover:text-secondary transition duration-300">Discipleship</a>
+                <a href="/contact.html" class="text-white hover:text-secondary transition duration-300">Contact</a>
             </div>
         </div>
     </header>
@@ -56,7 +56,13 @@
                 <h2 class="font-heading text-3xl md:text-4xl text-primary mb-6">Get in Touch</h2>
                 <p class="text-gray-700 mb-8">Have questions about The Bond or our discipleship programs? Want to join our community? Fill out the form and we'll get back to you as soon as possible.</p>
                 
-                <form class="space-y-6">
+                <form action="https://formsubmit.co/denisnzioka63@gmail.com" method="POST" class="space-y-6">
+    <!-- FormSubmit settings -->
+    <input type="hidden" name="_subject" value="New Contact Message - The Bond">
+    <input type="hidden" name="_captcha" value="true">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+
                     <div>
                         <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
                         <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition duration-300" required>
@@ -104,7 +110,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-gray-800 mb-1">Phone</h4>
-                                <a href="tel:+18005551234" class="text-primary hover:underline">(800) 555-1234</a>
+                                <a href="tel:+254 720 650679" class="text-primary hover:underline">+254 720 650679</a>
                             </div>
                         </div>
                         
@@ -113,8 +119,8 @@
                                 <i data-feather="map-pin" class="text-primary"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-800 mb-1">Meeting Location</h4>
-                                <p class="text-gray-700">123 Faith Avenue<br>Spiritual City, SC 12345</p>
+                                <h4 class="font-bold text-gray-800 mb-1">Office Location</h4>
+                                <p class="text-gray-700">Narok Town, Kenya</p>
                             </div>
                         </div>
                         
@@ -124,7 +130,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-gray-800 mb-1">Meeting Times</h4>
-                                <p class="text-gray-700">Sundays: 9am & 11am<br>Wednesdays: 7pm</p>
+                                <p class="text-gray-700">Sundays: 9pm Online<br>Wednesdays: 9pm</p>
                             </div>
                         </div>
                     </div>
@@ -135,7 +141,7 @@
                             <a href="#" class="bg-primary bg-opacity-10 hover:bg-opacity-20 p-3 rounded-full text-primary transition duration-300">
                                 <i data-feather="facebook"></i>
                             </a>
-                            <a href="#" class="bg-primary bg-opacity-10 hover:bg-opacity-20 p-3 rounded-full text-primary transition duration-300">
+                            <a href="https://www.instagram.com/the_bond22/" class="bg-primary bg-opacity-10 hover:bg-opacity-20 p-3 rounded-full text-primary transition duration-300">
                                 <i data-feather="instagram"></i>
                             </a>
                             <a href="#" class="bg-primary bg-opacity-10 hover:bg-opacity-20 p-3 rounded-full text-primary transition duration-300">
@@ -154,13 +160,13 @@
             <h2 class="font-heading text-3xl md:text-4xl text-center text-primary mb-16">Find Us</h2>
             <div class="bg-white p-1 rounded-lg shadow-md overflow-hidden">
                 <!-- Placeholder for map - in a real implementation you would use Google Maps or similar -->
-                <div class="w-full h-96 bg-gray-200 flex items-center justify-center">
-                    <div class="text-center">
-                        <i data-feather="map" class="w-12 h-12 text-primary mx-auto mb-4"></i>
-                        <p class="text-gray-700">Map would be displayed here</p>
-                        <p class="text-sm text-gray-500 mt-2">123 Faith Avenue, Spiritual City, SC 12345</p>
-                    </div>
-                </div>
+                <iframe
+    class="w-full h-96 border-0"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps?q=Oltalet+Mall,+Narok+Town,+Kenya&output=embed">
+</iframe>
+
             </div>
         </div>
     </section>
@@ -171,7 +177,7 @@
             <h2 class="font-heading text-3xl md:text-4xl mb-6">Ready to Join Our Community?</h2>
             <p class="text-xl mb-8">We'd love to welcome you to our next gathering or help you begin your discipleship journey.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#" class="bg-secondary hover:bg-yellow-600 text-primary font-bold py-3 px-8 rounded-lg transition duration-300">Join The Bond</a>
+                <a href="onboarding.html" class="bg-secondary hover:bg-yellow-600 text-primary font-bold py-3 px-8 rounded-lg transition duration-300">Join The Bond</a>
                 <a href="/discipleship" class="bg-transparent hover:bg-white hover:text-primary border-2 border-white text-white font-bold py-3 px-8 rounded-lg transition duration-300">Start Discipleship</a>
             </div>
         </div>
@@ -186,7 +192,7 @@
                     <div class="flex space-x-4">
                         <a href="#" class="text-white hover:text-secondary transition duration-300 text-xl"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="text-white hover:text-secondary transition duration-300 text-xl"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white hover:text-secondary transition duration-300 text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/the_bond22/" class="text-white hover:text-secondary transition duration-300 text-xl"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="text-white hover:text-secondary transition duration-300 text-xl"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
@@ -194,18 +200,18 @@
                 <div>
                     <h3 class="text-xl font-serif font-bold mb-4">Navigation</h3>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="hover:text-secondary transition duration-300">Home</a></li>
-                        <li><a href="about.html" class="hover:text-secondary transition duration-300">About</a></li>
-                        <li><a href="discipleship.html" class="hover:text-secondary transition duration-300">Discipleship</a></li>
-                        <li><a href="contact.html" class="hover:text-secondary transition duration-300">Contact</a></li>
+                        <li><a href="/" class="hover:text-secondary transition duration-300">Home</a></li>
+                        <li><a href="/about.html" class="hover:text-secondary transition duration-300">About</a></li>
+                        <li><a href="/discipleship.html" class="hover:text-secondary transition duration-300">Discipleship</a></li>
+                        <li><a href="/contact.html" class="hover:text-secondary transition duration-300">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div>
+               <div>
                     <h3 class="text-xl font-serif font-bold mb-4">Contact</h3>
                     <p class="mb-3 flex items-center">
                         <i class="fas fa-map-marker-alt mr-3 text-secondary"></i> 
-                        <span>123 Faith Avenue, Spiritual City</span>
+                        <span>Narok Town, Kenya</span>
                     </p>
                     <p class="mb-3 flex items-center">
                         <i class="fas fa-envelope mr-3 text-secondary"></i> 
@@ -213,11 +219,11 @@
                     </p>
                     <p class="mb-3 flex items-center">
                         <i class="fas fa-phone mr-3 text-secondary"></i> 
-                        <span>(123) 456-7890</span>
+                        <span>+254 720 650679</span>
                     </p>
                     <p class="flex items-center">
                         <i class="fas fa-clock mr-3 text-secondary"></i> 
-                        <span>Sundays: 9am - 12pm</span>
+                        <span>Open by Appointment</span>
                     </p>
                 </div>
             </div>
@@ -248,5 +254,4 @@
         });
     </script>
 </body>
-
 </html>
