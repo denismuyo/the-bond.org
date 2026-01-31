@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="components/navbar.js"></script>
     <script src="components/footer.js"></script>
@@ -153,7 +155,7 @@
             <!-- Leader 2 -->
             <div class="bg-white p-6 rounded-lg shadow-md text-center">
                 <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-secondary">
-                    <img src="DSC_8398.JPG" alt="Sarah Johnson" class="w-full h-full object-cover">
+                    <img src="nicole.jpeg" alt="Sarah Johnson" class="w-full h-full object-cover">
                 </div>
                 <h3 class="font-heading text-xl text-primary mb-2">Nicole Wambui</h3>
                 <p class="text-secondary font-bold mb-4">Secretary</p>
@@ -411,6 +413,13 @@
                 observer.observe(section);
             });
         });
+
+        const mobileBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
     </script>
 </body>
 </html>
